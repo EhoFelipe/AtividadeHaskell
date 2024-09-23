@@ -1,0 +1,9 @@
+soma :: Double -> Double -> Double -> Double
+soma x y z = x + y + z
+
+main :: IO ()
+main = do
+    let a = 1.2
+    let b = 2.3
+    let c = 3.4
+    putStrLn $ "A soma é " ++ show (soma a b c)
