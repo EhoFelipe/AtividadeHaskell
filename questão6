@@ -7,4 +7,4 @@ gerarLista n = gerarLista (n - 1) ++ [10 * (2 ^^ (n - 1))]
 main :: IO ()
 main = do
     let tamanho = 7
-    putStrLn $ "Lista de doubles: " ++ show (gerarListaDoubles tamanho)
+    putStrLn $ "Lista: " ++ show (gerarLista tamanho)
