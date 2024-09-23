@@ -1,0 +1,35 @@
+my_const
+Tipo: a -> b -> a
+A função my_const é uma função Curried que deve ser definida em algum lugar no seu código. O tipo é padrão de uma função que retorna o primeiro argumento.
+
+my_const True
+Tipo: b -> Bool
+Aplicando my_const a um valor True resulta em uma nova função que aceita um argumento de qualquer tipo b e sempre retorna True.
+
+append
+Tipo: [a] -> [a] -> [a]
+Append refere-se à função de concatenação de listas, que aceita duas listas do mesmo tipo e retorna uma nova lista.
+
+append []
+Tipo: [a] -> [a]
+Esta expressão aplica append à lista vazia, resultando em uma função que aceita uma lista do tipo a e retorna uma nova lista do mesmo tipo.
+
+append [True, False]
+Tipo: [Bool] -> [Bool]
+Aqui, append é aplicado a uma lista de booleanos, resultando em uma função que aceita outra lista de booleanos e a concatena.
+
+append [3] ['a', 'b']
+Tipo: Erro
+As duas listas têm tipos diferentes ([Int] e [Char]), o que gera um erro de tipo.
+
+append "squid" ['a', 'b']
+Tipo: [Char] -> [Char]
+"squid" é uma lista de caracteres ([Char]), enquanto ['a', 'b'] também é uma lista de caracteres. Isso não gera erro, e o tipo resultante seria [Char], pois ambas são do mesmo tipo.
+
+my_map
+Tipo: (a -> b) -> [a] -> [b]
+Esta expressão refere-se à função my_map, que deve ser definida em algum lugar no seu código. O tipo padrão aplica uma função a cada elemento de uma lista.
+
+my_map (my_const True)
+Tipo: [Bool] -> [Bool]
+Aqui, my_map é aplicado a uma função que retorna sempre True. Isso resulta em uma função que aceita uma lista de booleanos e retorna uma lista de booleanos (porque my_const True é uma função de tipo b -> Bool).
