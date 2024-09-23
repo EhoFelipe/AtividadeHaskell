@@ -1,0 +1,10 @@
+expressao :: Double -> Double -> Double -> Double -> Double
+expressao a b c x = a * x^2 + b * x + c
+
+main :: IO ()
+main = do
+    let a = 1.0
+    let b = -3.0
+    let c = 2.0
+    let x = 2.0
+    putStrLn $ "O valor da expressão quadrática é: " ++ show (expressao a b c x)
