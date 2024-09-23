@@ -1,0 +1,8 @@
+dollars :: [Double]
+dollars = iterate (* 1.05) 100.0
+
+-- Pegando os primeiros 10 anos como exemplo
+main :: IO ()
+main = do
+    let anos = take 10 dollars
+    putStrLn $ "Montantes ao longo dos anos: " ++ show anos
