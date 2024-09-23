@@ -1,0 +1,12 @@
+-- "squid" ++ "clam": Tipo: String. O operador ++ concatena duas listas, e em Haskell String é uma lista de caracteres ([Char]).
+a :: String
+a = "squid" ++ "clam"
+main :: IO()
+main = putStrLn a
+-- [True, False, True, True]: Tipo: [Bool]. Trata-se de uma lista de valores booleanos.
+b :: [Bool]
+b = [True, False, True, True]
+-- [True, False, 'a']: Erro de tipo. As listas em Haskell devem conter somente elementos do mesmo tipo. Aqui temos Bool e Char.
+-- (True, False, 'a'): Tipo: (Bool, Bool, Char). Uma tupla pode conter elementos de tipos diferentes.
+d : (Bool, Bool, String)
+d = (True, False, "a")
