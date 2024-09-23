@@ -1,0 +1,7 @@
+a :: Double -> Double
+a = a * a * a
+-- agora no main podemos chamar a função que criamos e printá-la
+main :: IO()
+main: do
+  let b = 2.5
+  putStrLn $ "O cubo é" ++ show (a b)
