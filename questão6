@@ -1,0 +1,10 @@
+gerarLista :: Int -> [Double]
+-- Caso base: lista vazia para n = 0
+gerarLista 0 = []
+gerarLista n = gerarLista (n - 1) ++ [10 * (2 ^^ (n - 1))] 
+-- A função vai gerar o ultimo número(n) da lista e chamará a função novamente para gerar o número anterior, repetindo esse processo até n=0
+
+main :: IO ()
+main = do
+    let tamanho = 7
+    putStrLn $ "Lista de doubles: " ++ show (gerarListaDoubles tamanho)
